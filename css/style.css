@@ -9,9 +9,9 @@ p {
   padding: 7px 0;
 }
 .container {
-  max-width: 1120px;
+  max-width: 520px;
   margin: 0 auto;
-  padding-top: 80px;
+  padding-top: 100px;
 }
 .nav {
   width: 100%;
@@ -31,21 +31,27 @@ p {
 
 .total-word {
   display: flex;
+  align-items: center;
   justify-content: center;
   margin: 10px 0;
 }
 
 .add-number {
   display: flex;
+  align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 10px;
 }
 
-.input-number {
-  width: 60px;
+.input {
   height: 21px;
   margin: 0;
   padding: 2px 8px;
+  width: 150px;
+}
+.input-number {
+  width: 60px;
 }
 
 .button {
@@ -60,4 +66,30 @@ p {
 .button:hover {
   background-color: #555555;
   color: white;
+}
+
+.list-questionnaire {
+  padding: 0 10px 20px 10px;
+}
+
+.items {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.item .text {
+  padding: 5px 0;
+}
+.item .result {
+  width: 50%;
+  min-width: 100px;
 }
