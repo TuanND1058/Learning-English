@@ -12,10 +12,15 @@
 
     <div class="nav">
       <div class="total-word">
-        <span>Total vocabulary:</span>
-        <span id="totalWord">1500</span>
+        <span>Total vocabulary:&nbsp;</span>
+        <span id="totalWord"></span>
       </div>
       <div class="add-number">
+        <select id="selectMode" class="select-number">
+          <option value="both">Both</option>
+          <option value="english">English</option>
+          <option value="vietnam">Vietnam</option>
+        </select>
         <select id="selectWord" class="select-number">
           <option value="10">10 word</option>
           <option value="15">15 word</option>
@@ -24,7 +29,6 @@
           <option value="30">30 word</option>
         </select>
         <button id="btnGenerates" class="button">Generates</button>
-        <button id="btnCheck" class="button">Check</button>
       </div>
     </div>
 
@@ -32,11 +36,11 @@
       <div class="section">
         <div id="listQuestionnaire" class="items">
           <div data-question="1" class="item success">
-            <div class="text">Honorificabilitudinitatibus</div>
-            <input type="text" class="input result" />
+            <div class="text">onorificabilitudinitatibus</div>
+            <input type="text" class="input result" onchange="checkResult()" />
           </div>
           <div class="item error">
-            <div class="text">12212312124</div>
+            <div class="text">bổ sung</div>
             <input type="text" class="input result" />
           </div>
           <div class="item">
@@ -215,6 +219,7 @@
       </div>
     </div>
 
+    <script src="data/data.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
