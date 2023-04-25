@@ -45,7 +45,7 @@ p {
 }
 
 .input {
-  height: 21px;
+  height: 30px;
   margin: 0;
   padding: 2px 8px;
   width: 150px;
@@ -99,10 +99,12 @@ p {
   cursor: pointer;
   padding: 5px;
   text-transform: lowercase;
+  font-size: 1.1rem;
 }
 .item .result {
   width: 50%;
   min-width: 100px;
+  font-size: 1.1rem;
 }
 
 .success {
