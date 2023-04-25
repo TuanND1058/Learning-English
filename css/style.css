@@ -96,6 +96,7 @@ p {
 }
 
 .item .text {
+  cursor: pointer;
   padding: 5px;
   text-transform: lowercase;
 }
@@ -112,4 +113,9 @@ p {
 .error {
   background: #f8d7da;
   color: #721c24;
+}
+
+.help {
+  background: #d1ecf1;
+  color: #0c5460;
 }

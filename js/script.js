@@ -43,23 +43,34 @@ btnGenerates.onclick = () => {
 const generateEnglish = (data) => {
   const { en, vi } = data
   listQuestionnaire.innerHTML += `
-    <div class="item">
-      <div class="text">${vi}</div>
-      <input type="text" class="input result" data-result="${en}" oninput="checkResult(this)" />
+    <div class="item" data-value="${vi}" data-result="${en}">
+      <div class="text" onclick="showResult(this)">${vi}</div>
+      <input type="text" class="input result" oninput="checkResult(this)" />
     </div>`
 }
 
 const generateVietnam = (data) => {
   const { en, vi } = data
   listQuestionnaire.innerHTML += `
-    <div class="item">
-      <div class="text">${en}</div>
-      <input type="text" class="input result" data-result="${vi}" oninput="checkResult(this)" />
+    <div class="item" data-value="${en}" data-result="${vi}">
+      <div class="text" onclick="showResult(this)">${en}</div>
+      <input type="text" class="input result" oninput="checkResult(this)" />
     </div>`
 }
 
+const showResult = (e) => {
+  const value = e.parentNode.getAttribute('data-value').trim().toLowerCase()
+  const result = e.parentNode.getAttribute('data-result').trim().toLowerCase()
+  e.innerHTML = result
+  e.parentElement.classList.add('help')
+  setTimeout(() => {
+    e.innerHTML = value
+    e.parentElement.classList.remove('help')
+  }, 2000)
+}
+
 const checkResult = (e) => {
-  const result = e.getAttribute('data-result').trim().toLowerCase()
+  const result = e.parentNode.getAttribute('data-result').trim().toLowerCase()
   const value = e.value.trim().toLowerCase()
   if (result === value) {
     e.classList.remove('error')
