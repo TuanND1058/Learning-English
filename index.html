@@ -12,25 +12,30 @@
 
     <div class="nav">
       <div class="total-word">
-        <span>Total word:</span>
-
+        <span>Total vocabulary:</span>
         <span id="totalWord">1500</span>
       </div>
       <div class="add-number">
-        <input id="inputNumber" class="input input-number" type="number" />
+        <select id="selectWord" class="select-number">
+          <option value="10">10 word</option>
+          <option value="15">15 word</option>
+          <option value="20">20 word</option>
+          <option value="25">25 word</option>
+          <option value="30">30 word</option>
+        </select>
         <button id="btnGenerates" class="button">Generates</button>
         <button id="btnCheck" class="button">Check</button>
       </div>
     </div>
 
     <div class="container">
-      <div class="list-questionnaire">
-        <div class="items">
-          <div class="item">
-            <div class="text">123123123123124</div>
+      <div class="section">
+        <div id="listQuestionnaire" class="items">
+          <div data-question="1" class="item success">
+            <div class="text">Honorificabilitudinitatibus</div>
             <input type="text" class="input result" />
           </div>
-          <div class="item">
+          <div class="item error">
             <div class="text">12212312124</div>
             <input type="text" class="input result" />
           </div>
