@@ -7,55 +7,56 @@ const listQuestionnaire = document.getElementById('listQuestionnaire')
 totalWord.innerHTML = data.length
 
 btnGenerates.onclick = () => {
-  if (data.length <= 0) {
-    alert('data null')
-  }
   const lengthData = data.length
+
+  if (lengthData <= 0) {
+    alert('data null')
+    return
+  }
+
   const lengthSelect = selectWord.value
-  const listValue = Array.from({ length: lengthSelect }, () =>
-    Math.floor(Math.random() * lengthData)
-  )
+  for (i = lengthData - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * i)
+    let k = data[i]
+    data[i] = data[j]
+    data[j] = k
+  }
+
+  const newData = data.slice(0, lengthSelect)
   listQuestionnaire.innerHTML = ''
   switch (selectMode.value) {
     case 'both':
-      listValue.forEach((e) => {
+      newData.forEach((e) => {
         const rand = Math.floor(Math.random() * 2)
-        if (rand === 0) {
-          generateEnglish(data[e])
+        if (rand != 0) {
+          generates('english', e)
         } else {
-          generateVietnam(data[e])
+          generates('vietnam', e)
         }
       })
       break
     case 'english':
-      listValue.forEach((e) => {
-        generateEnglish(data[e])
-      })
+      newData.forEach((e) => generates('english', e))
       break
     case 'vietnam':
-      listValue.forEach((e) => {
-        generateVietnam(data[e])
-      })
+      newData.forEach((e) => generates('vietnam', e))
       break
   }
 }
 
-const generateEnglish = (data) => {
+const generates = (type, data) => {
   const { en, vi } = data
   listQuestionnaire.innerHTML += `
-    <div class="item" data-value="${vi}" data-result="${en}">
-      <div class="text" onclick="showResult(this)">${vi}</div>
-      <input type="text" class="input result" oninput="checkResult(this)" />
-    </div>`
-}
-
-const generateVietnam = (data) => {
-  const { en, vi } = data
-  listQuestionnaire.innerHTML += `
-    <div class="item" data-value="${en}" data-result="${vi}">
-      <div class="text" onclick="showResult(this)">${en}</div>
-      <input type="text" class="input result" oninput="checkResult(this)" />
-    </div>`
+    <div
+      class="item"
+      data-value="${type != 'english' ? en : vi}"
+      data-result="${type != 'english' ? vi : en}"
+    >
+    <div class="text" onclick="showResult(this)">
+      ${type != 'english' ? en : vi}
+    </div>
+    <input type="text" class="input result" oninput="checkResult(this)" />
+  </div>`
 }
 
 const showResult = (e) => {
