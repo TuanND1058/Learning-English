@@ -1,4 +1,5 @@
 const data = [
+  //Unit 1
   { en: 'additional', vi: 'bổ sung' },
   { en: 'admit', vi: 'thừa nhận' },
   { en: 'agree', vi: 'đồng ý' },
@@ -30,7 +31,7 @@ const data = [
   { en: 'reason', vi: 'lý do' },
   { en: 'stamp', vi: 'con tem' },
   { en: 'whole', vi: 'toàn bộ' },
-
+  //Unit 2
   { en: 'almost', vi: 'hầu như' },
   { en: 'confidence', vi: 'sự tự tin' },
   { en: 'despite', vi: 'mặc dù' },
@@ -64,7 +65,7 @@ const data = [
   { en: 'warn', vi: 'cảnh báo' },
   { en: 'trick', vi: 'thủ thuật, mẹo' },
   { en: 'vowel', vi: 'nguyên âm' },
-
+  //Unit 3
   { en: 'address', vi: 'địa chỉ' },
   { en: 'advice', vi: 'lời khuyên' },
   { en: 'annual', vi: 'hàng năm' },
@@ -95,7 +96,7 @@ const data = [
   { en: 'therefore', vi: 'vì vậy' },
   { en: 'translate', vi: 'dịch' },
   { en: 'underline', vi: 'gạch dưới' },
-
+  //Unit 4
   { en: 'coincide', vi: 'trùng hợp' },
   { en: 'commit', vi: 'cam kết' },
   { en: 'conform', vi: 'tuân thủ' },
@@ -107,7 +108,7 @@ const data = [
   { en: 'consider', vi: 'cân nhắc' },
   { en: 'deceive', vi: 'lừa dối' },
   { en: 'dialogue', vi: 'hội thoại' },
-  { en: 'discrepancy', vi: 'sư khác nhau' },
+  { en: 'discrepancy', vi: 'sự khác nhau' },
   { en: 'envelope', vi: 'phong bì' },
   { en: 'especially', vi: 'đặc biệt' },
   { en: 'hyphen', vi: 'dấu nối' },
@@ -120,10 +121,40 @@ const data = [
   { en: 'refer', vi: 'giới thiệu' },
   { en: 'refuse', vi: 'từ chối' },
   { en: 'relevant', vi: 'liên quan' },
-  { en: 'repel', vi: 'đẩy lui' },
+  { en: 'repel', vi: 'đẩy lùi' },
   { en: 'represent', vi: 'đại diện' },
   { en: 'signature', vi: 'chữ ký' },
   { en: 'statement', vi: 'lời tuyên bố' },
   { en: 'strain', vi: 'căng thẳng' },
   { en: 'sympathy', vi: 'thông cảm' },
+  //Unit 5
+  { en: 'durable', vi: 'lâu bền' },
+  { en: 'edition', vi: 'phiên bản' },
+  { en: 'element', vi: 'nhân tố' },
+  { en: 'elevator', vi: 'thang máy' },
+  { en: 'equipment', vi: 'dụng cụ' },
+  { en: 'experiment', vi: 'cuộc thí nghiệm' },
+  { en: 'former', vi: 'trước đây' },
+  { en: 'fulfill', vi: 'hoàn thành' },
+  { en: 'fund', vi: 'quỹ' },
+  { en: 'gain', vi: 'thu được' },
+  { en: 'general', vi: 'chung' },
+  { en: 'generate', vi: 'tạo ra' },
+  { en: 'hammer', vi: 'cây búa' },
+  { en: 'leak', vi: 'rò rỉ' },
+  { en: 'perspective', vi: 'góc nhìn' },
+  { en: 'presume', vi: 'cho là' },
+  { en: 'proof', vi: 'bằng chứng' },
+  { en: 'proofreader', vi: 'người sửa bản in thử' },
+  { en: 'pure', vi: 'nguyên chất' },
+  { en: 'range', vi: 'phạm vi' },
+  { en: 'ray', vi: 'tia' },
+  { en: 'section', vi: 'phần' },
+  { en: 'sector', vi: 'mảng' },
+  { en: 'significant', vi: 'quan trọng' },
+  { en: 'skeleton', vi: 'bộ xương' },
+  { en: 'sleeve', vi: 'tay áo' },
+  { en: 'sponsor', vi: 'tài trợ' },
+  { en: 'stuff', vi: 'đồ đạc' },
+  { en: 'subject to', vi: 'tùy thuộc vào' },
 ]
