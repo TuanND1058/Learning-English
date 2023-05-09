@@ -52,11 +52,15 @@ const generates = (type, data) => {
       data-value="${type != 'english' ? en : vi}"
       data-result="${type != 'english' ? vi : en}"
     >
-    <div class="text" onclick="showResult(this)">
-      ${type != 'english' ? en : vi}
-    </div>
-    <input type="text" class="input result" oninput="checkResult(this)" />
-  </div>`
+      <div class="text" onclick="showResult(this)">
+        ${type != 'english' ? en : vi}
+      </div>
+      <input
+        type="text"
+        class="input result"
+        oninput="checkResult(this)"
+        onkeyup="handleKeyDown(event, this)"/>
+    </div>`
 }
 
 const showResult = (e) => {
@@ -89,5 +93,13 @@ const checkResult = (e) => {
     e.classList.remove('success')
     e.parentElement.classList.remove('error')
     e.parentElement.classList.remove('success')
+  }
+}
+
+const handleKeyDown = (event, e) => {
+  console.log(event)
+  console.log(e)
+  if (event.ctrlKey && event.key === '/') {
+    showResult(e.parentNode.querySelector('.text'))
   }
 }
