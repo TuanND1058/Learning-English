@@ -33,12 +33,19 @@ const handelSearch = () => {
 
   newData.forEach((e) => {
     listQuestionnaire.innerHTML += `
-    <div class="item">
+    <div class="item" onclick="highlightInfo(this)">
       <div class="text">${e.en}</div>
       <div class="text">${e.vi}</div>
     </div>
   `
   })
+}
+
+const highlightInfo = (e) => {
+  e.classList.add('help')
+  setTimeout(() => {
+    e.classList.remove('help')
+  }, 2000)
 }
 
 btnSearch.onclick = handelSearch
