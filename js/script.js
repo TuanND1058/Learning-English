@@ -14,15 +14,17 @@ btnGenerates.onclick = () => {
     return
   }
 
+  const dataO = [...data]
   const lengthSelect = selectWord.value
+
   for (i = lengthData - 1; i > 0; i--) {
     let j = Math.floor(Math.random() * i)
-    let k = data[i]
-    data[i] = data[j]
-    data[j] = k
+    let k = dataO[i]
+    dataO[i] = dataO[j]
+    dataO[j] = k
   }
 
-  const newData = data.slice(0, lengthSelect)
+  const newData = dataO.slice(0, lengthSelect)
   listQuestionnaire.innerHTML = ''
   switch (selectMode.value) {
     case 'both':
