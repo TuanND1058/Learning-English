@@ -26,7 +26,10 @@ const handelSearch = () => {
   const value = inputSearch.value
 
   const newData = data.filter((e) => {
-    return e.en.includes(value) || e.vi.includes(value)
+    return (
+      e.en.toLowerCase().includes(value.toLowerCase()) ||
+      e.vi.toLowerCase().includes(value.toLowerCase())
+    )
   })
 
   listQuestionnaire.innerHTML = ''
