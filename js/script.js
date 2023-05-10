@@ -97,8 +97,6 @@ const checkResult = (e) => {
 }
 
 const handleKeyDown = (event, e) => {
-  console.log(event)
-  console.log(e)
   if (event.ctrlKey && event.key === '/') {
     showResult(e.parentNode.querySelector('.text'))
   }

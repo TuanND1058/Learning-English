@@ -54,6 +54,12 @@ p {
   text-transform: lowercase;
 }
 
+.input-text {
+  height: 21px;
+  margin: 0;
+  padding: 2px 8px;
+}
+
 .select-number {
   width: 90px;
   height: 28px;
@@ -120,4 +126,8 @@ p {
 .help {
   background: #d1ecf1;
   color: #0c5460;
+}
+
+.display-none {
+  display: none;
 }

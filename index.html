@@ -8,14 +8,16 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="version">1.0.3</div>
+    <div class="version">1.0.4</div>
 
     <div class="nav">
       <div class="total-word">
-        <span>Total vocabulary:&nbsp;</span>
+        <button id="btnDictionary" class="button">Dictionary</button>
+        <button id="btnLearning" class="button display-none">Learning</button>
+        <span>&nbsp;Total vocabulary:&nbsp;</span>
         <span id="totalWord"></span>
       </div>
-      <div class="add-number">
+      <div id="learning" class="add-number">
         <select id="selectMode" class="select-number">
           <option value="both">Both</option>
           <option value="english">English</option>
@@ -32,6 +34,10 @@
         </select>
         <button id="btnGenerates" class="button">Generates</button>
       </div>
+      <div id="dictionary" class="add-number display-none">
+        <input type="text" id="inputSearch" class="input-text" />
+        <button id="btnSearch" class="button">Search</button>
+      </div>
     </div>
 
     <div class="container">
@@ -42,5 +48,6 @@
 
     <script src="data/data.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/dictionaryScript.js"></script>
   </body>
 </html>
