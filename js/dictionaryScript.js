@@ -3,7 +3,6 @@ const btnLearning = document.getElementById('btnLearning')
 const learning = document.getElementById('learning')
 const dictionary = document.getElementById('dictionary')
 const inputSearch = document.getElementById('inputSearch')
-const btnSearch = document.getElementById('btnSearch')
 
 btnDictionary.onclick = () => {
   btnDictionary.classList.add('display-none')
@@ -12,6 +11,7 @@ btnDictionary.onclick = () => {
   learning.classList.add('display-none')
   listQuestionnaire.innerHTML = ''
   inputSearch.focus()
+  handelSearch()
 }
 
 btnLearning.onclick = () => {
@@ -24,7 +24,7 @@ btnLearning.onclick = () => {
 
 const handelSearch = () => {
   const value = inputSearch.value
-
+  debugger
   const newData = data.filter((e) => {
     return (
       e.en.toLowerCase().includes(value.toLowerCase()) ||
@@ -51,10 +51,4 @@ const highlightInfo = (e) => {
   }, 2000)
 }
 
-btnSearch.onclick = handelSearch
-
-inputSearch.onkeydown = (e) => {
-  if (e.key === 'Enter') {
-    handelSearch()
-  }
-}
+inputSearch.onkeyup = handelSearch
