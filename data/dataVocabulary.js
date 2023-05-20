@@ -1,4 +1,4 @@
-const data = [
+const dataVocabulary = [
   //Unit 1
   { en: 'additional', vi: 'bổ sung' },
   { en: 'admit', vi: 'thừa nhận' },

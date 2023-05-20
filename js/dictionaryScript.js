@@ -24,8 +24,7 @@ btnLearning.onclick = () => {
 
 const handelSearch = () => {
   const value = inputSearch.value
-  debugger
-  const newData = data.filter((e) => {
+  const newData = dataDictionary.filter((e) => {
     return (
       e.en.toLowerCase().includes(value.toLowerCase()) ||
       e.vi.toLowerCase().includes(value.toLowerCase())

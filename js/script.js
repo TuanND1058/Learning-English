@@ -4,17 +4,17 @@ const selectWord = document.getElementById('selectWord')
 const btnGenerates = document.getElementById('btnGenerates')
 const listQuestionnaire = document.getElementById('listQuestionnaire')
 
-totalWord.innerHTML = data.length
+totalWord.innerHTML = dataMain.length
 
 btnGenerates.onclick = () => {
-  const lengthData = data.length
+  const lengthData = dataMain.length
 
   if (lengthData <= 0) {
     alert('data null')
     return
   }
 
-  const dataO = [...data]
+  const dataO = [...dataMain]
   const lengthSelect = selectWord.value
 
   for (i = lengthData - 1; i > 0; i--) {
