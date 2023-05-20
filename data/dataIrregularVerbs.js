@@ -16,7 +16,7 @@ const dataIrregularVerbs = [
   { en: 'drive', vi: 'drove' },
   { en: 'eat', vi: 'ate' },
   { en: 'fall', vi: 'fell' },
-  { en: 'feet', vi: 'felt' },
+  { en: 'feel', vi: 'felt' },
   { en: 'fight', vi: 'fought' },
   { en: 'find', vi: 'found' },
   { en: 'fly', vi: 'flew' },
